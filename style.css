@@ -1,0 +1,742 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+.border{
+  position:relative;
+  border:solid;
+  border-color:#ffffff;
+  border-radius: 60px;
+  width:75%;
+  left: 12.5%;
+}
+.border2{
+  position:relative;
+  border:solid;
+  border-color:#ffffff;
+  border-radius: 10px;
+  width:75%;
+  left: 12.5%;
+}
+
+.roundedBox {
+  position: fixed;
+  left: -100vw;
+  width: calc(50vw);
+  height: 100vh;
+  background: linear-gradient(90deg, #023047 10%,#000000 90%);
+  border-radius: 0px;
+  border: none;
+  transition: left 1s ease-out;
+  z-index: 1;
+  animation: slideIn 5s forwards;
+}
+
+@keyframes slideIn {
+  from {left: -100vw;}
+  to {left: -5vw;}
+}
+
+@keyframes removeSection{
+  0% {left: -5vw};
+  100% {left: -100vw};
+}
+
+@keyframes addSection{
+  0% {left: -100vw};
+  100% {left: -5vw};
+}
+
+.content {
+  position:absolute;
+  top:0%;
+  left:20%;
+  background-color: black, 0;
+  width: 70%;
+  height:100%;
+  overflow: scroll;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.content::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.content {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.text{
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 25px;
+  color:#ffffff;
+  line-height: 50px;
+}
+
+.header {
+  margin-top:50%;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 40px;
+  color:#ffb703;
+}
+
+.headerM {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 30px;
+  color:white;
+}
+
+.subHeader {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 25px;
+  color:rgb(255, 199, 14);
+}
+
+.horizontalLine {
+  width:80%;
+}
+
+.progressBar {
+  position:absolute;
+  top: -1%;
+  left: 100%;
+  width:1%;
+  background-color: white,0;
+  border-color:white;
+  /* border-style:solid; */
+  height:70%;
+}
+.outline {
+  position:absolute;
+  top: -1%;
+  left: 100%;
+  width:1%;
+  background-color: white,0;
+  border-color:rgba(255, 255, 255, 0);
+  border-style:solid;
+  height:101%;
+}
+
+.progress {
+  position: absolute;
+  top: 0;
+  left: -3px;
+  width: 100%; /* Adjust as needed */
+  background-color: #fb8500;
+  height: 0;
+  transition: height 0.1s ease; /* Adjust the transition speed as needed */
+}
+
+.roundedBox2 {
+  position: fixed;
+  left: 200vw;
+  width: calc(50vw);
+  height: 100vh;
+  background: linear-gradient(90deg, #000000 30%,#187288 90%);
+  border-radius: 0px;
+  border: none;
+  transition: left 1s ease-out;
+  z-index: 1;
+  animation: ;
+} 
+
+@keyframes addSectionOne {
+  0% {left: 200vw}
+  100% {left: 60vw}
+}
+@keyframes removeSectionOne {
+  0% {left: 60vw}
+  100% {left: 200vw}
+}
+
+.content2 {
+  position:absolute;
+  top:0%;
+  left:5%;
+  background-color: black, 0;
+  width: 70%;
+  height:100%;
+  overflow: scroll;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.content2::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.content2 {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+#modelContainer {
+  position: fixed;
+  top:-10vh;
+  left: 0vw;
+  width: 100vw;
+  z-index: 0;
+  animation: slideInModel 5s forwards; /* Smooth transition for the left property */
+}
+
+@keyframes slideInModel {
+  from {
+    left: 0vw;
+    transform: scale(1);
+  }
+  to {
+    left: 25vw;
+    transform: scale(1); /* Adjust the scale factor as needed */
+  }
+}
+@keyframes moveSectionOne {
+  0% {left: 25vw}
+  100% {left:-20vw}
+}
+@keyframes readjustSectionOne {
+  0% {left: -20vw}
+  100% {left:0vw}
+}
+
+.intro {
+  position: absolute;
+  top: 15vh; /* Adjust the distance from the top as needed */
+  left: 43%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0); /* Adjust the background color and transparency as needed */
+  padding: 20px;
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  font-family: 'Montserrat', sans-serif;
+  transform: scale(3);
+  animation: ; 
+}
+
+@keyframes slideOut {
+  0% {top:15vh}
+  100% {top:-10vh}
+}
+@keyframes slideIn2 {
+  0% {top:-10vh}
+  100% {top:15vh}
+}
+
+.typeEffect {
+  position:fixed;
+  top:10vh;
+  width:100vw;
+  height:10vw;
+  background-color: black;
+  animation: typingEffect 5s forwards;
+}
+
+@keyframes typingEffect {
+  0%   {left: 0vw;}
+  75%  {left: 0vw;}
+  100% {left: 100vw;}
+}
+
+.screen {
+  position:absolute;
+  left:30%;
+  top:38%;
+  width: 39.5%;
+  height: 37%;
+  transform:scale(0);
+  background-color: rgb(0, 0, 0);
+  animation: ;
+}
+
+.screen2 {
+  position:absolute;
+  left:30%;
+  top:38%;
+  width: 39.5%;
+  height: 37%;
+  transform:scale(0);
+  background-color: rgb(0, 0, 0);
+  animation: ;
+}
+
+.vid{
+  position:absolute;
+  left:2.5%;
+  top:2.5%;
+  width:95%;
+  height:95%;
+  transform: scale(0);
+  animation: screenOn 5s ease forwards;
+}
+
+@keyframes screenOn {
+  0% {transform: scale(0);}
+  100% {transform: scale(1);}
+}
+
+@keyframes screenOff {
+  0% {transform: scale(1);}
+  100% {transform: scale(0);}
+}
+
+.image {
+  position:absolute;
+  left:2.5%;
+  top:2.5%;
+  width:95%;
+  height:95%;
+  transform: scale(0);
+  background-color: rgb(255, 255, 255);
+  animation: ;
+}
+
+@keyframes imgOn {
+  0%   {transform: scale(0);}
+  100% {transform: scale(1);}
+}
+
+@keyframes imgOff {
+  0%   {transform: scale(1);}
+  100% {transform: scale(0);}
+}
+
+.name {
+  position: absolute;
+  top: 200vh; /* Adjust the distance from the top as needed */
+  left: 46%;
+  transform: translateX(-50%);
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0); /* Adjust the background color and transparency as needed */
+  padding: 20px;
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  font-family: 'Montserrat', sans-serif;
+  transform: scale(3);
+  animation: slideInName 5s forwards;
+}
+
+@keyframes slideInName {
+  0%   {top: 200vh;}
+  100% {top: 100vh;}
+}
+
+#lookRightButton{
+  position: absolute;
+  border-radius: 10px;
+  background-color: #1ef4b4;
+  border: none;
+  color: #000000;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  width:50%;
+  left:25%;
+  margin-top:-15%;
+}
+
+#lookRightButton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#lookRightButton span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#lookRightButton:hover span {
+  padding-right: 25px;
+}
+
+#lookRightButton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.projects {
+  position: absolute;
+  top:10%;
+  left:25%;
+  width:50%;
+  height:100%;
+  background-color: rgb(255, 255, 255,0);
+  z-index: 0;
+  transform:scale(0);
+  animation: ;
+}
+@keyframes appear {
+  0% {transform: scale(0)}
+  100% {transform: scale(1)}
+}
+@keyframes disappear {
+  0% {left:25%}
+  100% {left: 1000px}
+}
+
+.project1 {
+  position: absolute;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 20%;
+  left:0%;
+  width:50%;
+  height:20%;
+  background-color: rgb(38, 0, 255),0;
+  animation: ;
+}
+@keyframes btnOneAppear {
+  0% {left: -1000px}
+  100% {left: 0%}
+}
+@keyframes btnOneDisappear {
+  0% {left: 0%}
+  100% {left: -1000px}
+}
+
+.project2 {
+  position: absolute;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 20%;
+  left:50%;
+  width:50%;
+  height:20%;
+  background-color: red,0;
+  animation: ;
+}
+@keyframes btnTwoAppear {
+  0% {top: 1000px}
+  100% {top: 20%}
+}
+@keyframes btnTwoDisappear {
+  0% {top: 20%}
+  100% {top: 1000px}
+}
+
+.project3 {
+  position: absolute;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 40%;
+  left:0%;
+  width:50%;
+  height:20%;
+  background-color: rgb(255, 0, 212),0;
+  animation: ;
+}
+@keyframes btnThreeAppear {
+  0% {top: -1000px}
+  100% {top: 40%}
+}
+@keyframes btnThreeDisappear {
+  0% {top: 40%}
+  100% {top: -1000px}
+}
+
+.project4 {
+  position: absolute;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 40%;
+  left:50%;
+  width:50%;
+  height:20%;
+  background-color: rgb(255, 102, 0),0;
+  animation: ;
+}
+@keyframes btnFourAppear {
+  0% {left: 1000px}
+  100% {left: 50%}
+}
+@keyframes btnFourDisappear {
+  0% {left: 50%}
+  100% {left: 1500px}
+}
+
+.label {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:#ffb703;
+  text-align: center;
+  width: 100%;
+  font-size: 20px;
+}
+
+.title {
+  margin-left:40%;
+  margin-top:10%;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 40px;
+  color:#ffb703;
+}
+
+a {
+  width: 60%; /* Adjust as needed */
+  height: 60%; /* Adjust as needed */
+  background-color: rgb(0, 0, 0); 
+  border: #fb8500;
+  border-style:outset;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  transition:100ms;
+}
+
+a:hover {
+  background-color: rgb(109, 109, 109);
+  transition:100ms;
+  cursor: pointer;
+} 
+
+#contactButton{
+  position: absolute;
+  border-radius: 20px;
+  background-color:#ffac4d;
+  border: none;
+  color: #000000;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  width:15%;
+  height: 8%;
+  left:42.5%;
+  margin-top:200%;
+  transform: scale(0.8);
+  animation: ;
+}
+@keyframes btnBobbing {
+  0% {transform: translateY(0px) scale(0.8);
+      margin-top:37%}
+  50% {transform: translateY(10px) scale(0.8);
+       margin-top:37%}
+  100% {transform: translateY(0px) scale(0.8);
+        margin-top:37%}
+}
+@keyframes addBtn {
+  0% {margin-top: 200%}
+  100% {margin-top: 37%}
+}
+@keyframes removeBtn {
+  0% {margin-top: 37%}
+  100% {margin-top: 200%}
+}
+
+#contactButton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#contactButton span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#contactButton:hover span {
+  padding-right: 25px;
+}
+
+#contactButton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.name231{
+  background-color: red,0;
+  position: absolute;
+  top: 30%;
+  left:100%;
+  width:100%;
+  height:50%;
+  animation: ;
+}
+@keyframes name231Slide {
+  0% {left:100%}
+  100% {left:52%}
+}
+@keyframes name231SlideOut {
+  0% {left:76%}
+  100% {left:100%}
+}
+
+.firstName{
+  position:absolute;
+  width:14.5%;
+  height:4vh;
+  left:15%;
+  top:10vh;
+  border: none;
+  border-radius:5px;
+  text-align:center;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: clamp(10px, 1.5vw, 15px);
+}
+.lastName{
+  position:absolute;
+  width:14.5%;
+  height:4vh;
+  left:30.5%;
+  top:10vh;
+  border: none;
+  border-radius:5px;
+  text-align:center;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: clamp(10px, 1.5vw, 15px);
+}
+
+.Email{
+  position:absolute;
+  width:30%;
+  height:4vh;
+  left:15%;
+  top:16vh;
+  border: none;
+  border-radius:5px;
+  text-align:center;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: clamp(10px, 1.5vw, 15px);
+}
+
+.description{
+  position:absolute;
+  resize:none;
+  width:30%;
+  height:10vh;
+  top:22vh;
+  left:15%;
+  border: none;
+  border-radius:5px;
+  text-align:center;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: clamp(10px, 1.5vw, 15px);
+}
+
+input[type='submit']{
+  position:absolute;
+  width:30%;
+  height:4vh;
+  top:34vh;
+  left:15%;
+  border: none;
+  border-radius:5px;
+  background-color:#fb8500;
+  color:#ffffff;
+  text-align:center;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: clamp(10px, 1.5vw, 15px);
+  transition: 400ms ease;
+}
+
+input[type='submit']:hover{
+  transform:scale(1.05,1.05);
+  background-color:#eea300;
+  cursor:pointer;
+  transition: 400ms ease;
+}
+
+.headerTwo {
+  background-color: blue,0;
+  position:absolute;
+  top:25%;
+  left:300%;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 40px;
+  color:#ffb703;
+  animation: ;
+}
+@keyframes contactSlide {
+  0% {left:100%}
+  100% {left:76%}
+}
+@keyframes contactSlideOut {
+  0% {left:76%}
+  100% {left:100%}
+}
+
+#homeButton{
+  position: absolute;
+  border-radius: 20px;
+  background-color:#ffac4d;
+  border: none;
+  color: #000000;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  width:15%;
+  height: 8%;
+  left:74%;
+  margin-top:200%;
+  transform: scale(1);
+  animation: ;
+}
+
+@keyframes addHomeBtn {
+  0% {margin-top: 200%}
+  100% {margin-top: 45%}
+}
+@keyframes removeHomeBtn {
+  0% {margin-top: 45%}
+  100% {margin-top: 200%}
+}
+
+#homeButton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#homeButton span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#homeButton:hover span {
+  padding-right: 25px;
+}
+
+#homeButton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
